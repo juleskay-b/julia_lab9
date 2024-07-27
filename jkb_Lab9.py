@@ -25,3 +25,32 @@ def decode(encoded_password): # function to decode password - Sofia
             original += str(int(i) - 3)
     return original
 
+def main(): #Main function - Julia
+    while True:
+        print("Menu")
+        print("-------------")
+        print("1. Encode")
+        print("2. Decode")
+        print("3. Quit")
+        print("")
+        selection = input("Please enter an option: ")
+        if selection == "1":
+            password = input("Please enter the password to encode: ")
+            print("Your password has been encoded and stored!")
+            print("")
+
+        elif selection == "2":
+            e_password = encode(password)
+            d_password = decode(e_password)
+            print(f"The encoded password is {e_password}, and the original password is {d_password}.")
+            print("")
+        elif selection == "3":
+            break
+        else:
+            print("Error. Invalid option.")
+            print("")
+
+    return
+
+if __name__ == "__main__":
+    main()
